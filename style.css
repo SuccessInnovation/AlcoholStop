@@ -1,0 +1,1362 @@
+/* 폰트 */
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+    format("woff");
+  font-weight: 400; /* = normal */
+  font-style: normal;
+}
+/* 절주온 스타일시트 */
+/* 초기화 */
+html {
+  margin: 0;
+  padding: 0;
+  color: #444;
+  line-height: 1.5;
+  vertical-align: baseline;
+  font-size: 10px;
+  font-family: Noto, "맑은 고딕", Malgun Gothic, "돋움", Dotum, "굴림", Gulim,
+    Arial, Verdana, AppleGothic, UnDotum, sans-serif;
+  font-weight: 400;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  place-items: center; /* 가운데 정렬 */
+}
+#app {
+  /* wrap 사이즈!!! footer는 이 사이즈를 상속받음 */
+  text-align: center;
+  align-items: center;
+  background-color: #dae9f5;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* main, footer 너비 설정 */
+.wrap_con {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+#main {
+  margin-top: 17rem;
+  margin-bottom: 10rem;
+  padding-bottom: 23rem;
+  position: relative;
+}
+
+#main::before {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200%;
+  height: 100%;
+  transform: translateX(-50%) translateY(20%);
+  background-image: url("./image/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+/* 중앙 부분 */
+.mainCenter {
+  width: 29%;
+  height: 620px;
+  position: absolute;
+  border: 7px solid white;
+  border-radius: 20px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 35px;
+  padding-top: 95px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* 이미지 */
+.mainCenter > h2 {
+  /* border: 1px solid red; */
+  margin-bottom: 47px;
+}
+
+.mainCenter img {
+  /* border: 1px solid red; */
+  max-width: 100%;
+}
+
+.mainCenter > span {
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: -138px;
+  left: 10px;
+  width: 105%;
+  height: 272px;
+  background: url("./image/jjo_characters.png") no-repeat center bottom / 100%;
+  background-size: contain;
+
+  overflow: visible;
+}
+
+/* <--------오른쪽 시작--------> */
+.right {
+  float: right;
+  width: 34%;
+}
+.rightbox {
+  width: 100%;
+  padding: 35px;
+  max-width: 510px;
+  height: 420px;
+  box-sizing: border-box;
+  unicode-bidi: isolate;
+  border-radius: 20px;
+  overflow: hidden;
+
+  text-align: center;
+  align-items: center;
+  margin-bottom: 17px;
+  background-color: #fff;
+}
+.wrapper > h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-family: "Nanum Square Round", sans-serif;
+  font-weight: 800 !important;
+  font-size: 2.4rem;
+  display: block;
+  text-align: center;
+}
+.wrapper {
+  width: 100%;
+  height: 350px;
+}
+
+.blueicon {
+  background: url(./image/blue_comma.png) no-repeat 0 center;
+  display: inline-block;
+  width: 48px;
+  height: 54px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.newsarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+.rightbox a {
+  color: #464646;
+  text-decoration: none;
+}
+.newsarea .tab {
+  position: relative;
+  margin: 15px 12px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.newsarea .tab a.active::after {
+  display: block;
+  position: relative;
+  bottom: 3px;
+  width: 100%;
+  height: 7px;
+  background-color: rgba(58, 109, 213, 0.12);
+  transition: all 0.3s;
+  content: "";
+  opacity: 0;
+}
+.newsarea .tab a:hover::after,
+.newsarea .tab a:hover,
+.newsarea .tab a.active::after {
+  width: 100%;
+  opacity: 1;
+  color: #3a6dd5 !important;
+}
+.newsarea::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 150%;
+  height: 60px;
+  background-color: #f6f7f8;
+  transform: translateX(-50%);
+  content: "";
+}
+.newsarea::after {
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  width: 0;
+  height: 7px;
+  background-color: rgba(58, 109, 213, 0.12);
+  transition: all 0.3s;
+  content: "";
+  opacity: 1;
+}
+h3 {
+  width: auto;
+  display: inline-block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.rightbox .newsarea h3 > a {
+  color: #464646;
+  width: auto;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  padding: 6px 0;
+  cursor: pointer;
+}
+h3 > a.active {
+  color: #3a6dd5 !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+.tab-news {
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+}
+
+/* active 클래스를 가진 .tab-news는 보이도록 처리 */
+.tab-news.active {
+  display: block;
+  opacity: 1;
+}
+
+/* "더보기" 버튼이 보이도록 active 상태일 때 설정 */
+.tab-news.active .more {
+  display: block;
+  opacity: 1;
+}
+
+.newsarea .tab a::after {
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  width: 0;
+  height: 7px;
+  background-color: rgba(58, 109, 213, 0.12);
+  transition: all 0.3s;
+  content: "";
+  opacity: 0;
+}
+.newsarea .more {
+  position: absolute;
+  top: 15px;
+  font-size: 1.5rem;
+  right: 0;
+  color: #767676;
+}
+.newsarea .more:hover {
+  text-decoration: underline;
+}
+.newsarea .more i {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 100%;
+  color: #000;
+  text-align: center;
+  line-height: 26px;
+  font-size: 18px;
+}
+.xi-plus-min:before {
+  content: "\e914";
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+.news-list li a .tit {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.news-list li a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.news-list > li:first-child .desc {
+  display: block;
+  height: 44px;
+  overflow: hidden;
+}
+
+.news-list > li:first-child .tit {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.news-list > li:first-child {
+  margin-bottom: 18px;
+  padding-bottom: 20px;
+  border-bottom: dotted 1px #ccc;
+}
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+
+.news-list li a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news-list li a:hover {
+  text-decoration: underline;
+}
+
+.news-list > li:nth-child(n + 2) a {
+  display: inline-block;
+  width: calc(100% - 90px);
+  padding-right: 10px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.news-list > li:nth-child(n + 2) {
+  margin-top: 15px;
+  line-height: 1;
+}
+
+/* main-right 하단 */
+.icon-link {
+  width: 100%;
+  background-color: #0683b7;
+  border-radius: 20px;
+  padding: 43px 28px;
+  box-sizing: border-box;
+}
+
+.icon-link img {
+  height: 46px;
+  margin-bottom: 13px;
+}
+
+.icon-link a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.icon-link a:hover {
+  text-decoration: underline;
+}
+
+.icon-link ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.icon-link li {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-link li:last-child {
+  margin-right: 0px;
+}
+
+.icon-link span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* <-------오른쪽 끝-------> */
+
+/* main_left 스타일 지정 시작 */
+/* 추가 */
+.left {
+  width: 34%;
+  float: left;
+}
+
+.left * {
+  font-family: nanumsquareround, sans-serif;
+}
+/* main_latestData 스타일 지정 시작 */
+
+.leftTopWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  /* 추가 */
+  width: 100%;
+  height: 420px;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.951);
+  margin-bottom: 17px;
+}
+
+.leftTop {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftTopTitle {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.leftTopTitle h2 {
+  font-size: 2.4rem;
+  color: #444444;
+}
+
+.leftTopArticle {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftTopArticle > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 9rem);
+  height: calc(100% - 4rem);
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.leftTopArticle li {
+  width: 50%;
+  height: 50%;
+  padding: 2px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.leftTopArticle a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(100% - 5px);
+  height: calc(100% - 4px);
+  margin: 0 auto;
+  border: 1px solid rgb(221, 213, 213);
+  border-radius: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.leftTopArticle a p {
+  margin: 7px 0;
+  font-size: 14px;
+  color: #69758e;
+}
+
+.leftTopArticle li a:hover {
+  text-decoration: underline black;
+}
+
+.leftTopArticle a .ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 85%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  color: #464646;
+}
+
+/* main_latestData 스타일 지정 끝 */
+
+/* 메인 > 왼쪽 > 아래 영역 시작 */
+/* a 태그 밑줄 제거 */
+.main_leftBottomLink {
+  text-decoration: none;
+}
+
+/* div 박스 설정 */
+.main_leftBottomBox {
+  position: relative;
+  background-color: rgb(120, 98, 191);
+  /* 추가 */
+  width: 100%;
+  height: 180px;
+  border-radius: 20px;
+  padding: 40px 38px 24px 38px;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+/* 전체 박스 hover 이벤트 생성 */
+/* 추가 - 화살표 클래스이름 수정 */
+.main_leftBottomLink:hover .arrow {
+  transform: translateX(10px);
+}
+
+/* div 박스 내부 왼쪽 부분 설정 */
+.main_leftBottomBox span div {
+  width: 50%;
+  font-family: nanumsquareround, sans-serif;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  line-height: 3rem;
+  /* 추가 */
+  text-align: left;
+}
+
+/* '절주전문인력' bold체 */
+.main_leftBottomBox span div:first-of-type {
+  font-weight: bold;
+}
+
+/* 추가 */
+.arrow {
+  background: transparent;
+  border: 0;
+}
+
+/* 추가 */
+.arrow::after {
+  content: "\f178";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  line-height: 8rem;
+  font-size: 20px;
+  color: white;
+}
+
+/* 캐릭터 이미지 설정 */
+.main_leftBottomBox img {
+  width: 150px;
+  position: absolute;
+  float: right;
+  right: 8%;
+  top: 12%;
+}
+
+/* 메인 > 왼쪽 > 아래 영역 끝 */
+
+/* header 상단 영역 시작 */
+#header {
+  width: 100%;
+  height: 49px;
+  box-sizing: border-box;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+}
+
+/* 좌측 dropdown 시작 */
+.left-dropdown {
+  position: relative;
+  width: 25rem;
+  height: 48px;
+}
+.dropdown-btn {
+  width: 100%;
+  height: 100%;
+  background-color: #dae9f5;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 0;
+}
+.dropdown-btn::before {
+  content: "\e936";
+  font-family: "xeicon" !important;
+  font-style: normal;
+  font-size: 16px;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.dropdown-btn.active::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+.dropdown-btn span {
+  font-family: "Noto";
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #333;
+}
+.dropdown-btn i {
+  margin-left: auto;
+}
+.dropdown-list {
+  background-color: white;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  width: 100%;
+  list-style: none;
+  z-index: 1000;
+  display: none;
+  font-family: "Noto";
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 0;
+  height: auto;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: 400;
+  line-height: 2.6rem;
+}
+.dropdown-list.open {
+  display: block;
+}
+.dropdown-list li a {
+  text-decoration: none;
+  padding: 4px 5px 4px 20px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease-in-out;
+  color: #555;
+}
+.dropdown-list li a span {
+  position: relative;
+  display: inline-block;
+  font-family: "Noto";
+  font-size: 15px;
+  font-weight: 500;
+}
+.dropdown-list li a span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  height: 6px;
+  width: 0;
+  background-color: #ffbb8b;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.dropdown-list li a:hover {
+  color: #4662b6;
+}
+.dropdown-list li a:hover span::before {
+  width: 100%;
+}
+.dropdown-list li a.active {
+  color: #2554c7; /*active에 color*/
+}
+.dropdown-list li a.active span::before {
+  width: 100%; /*active에 밑줄*/
+}
+
+/* 우측 링크 div 시작 */
+.right-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.sns-wrap {
+  position: relative;
+  display: inline-block;
+  height: 48px;
+  box-sizing: border-box;
+}
+.sns-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Noto";
+  color: #444;
+  height: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.sns-button::before {
+  content: "\ea13";
+  font-family: "xeicon" !important;
+  font-weight: 400;
+  font-size: 15px;
+  margin-right: 6px;
+  display: inline-block;
+}
+.sns-button-list {
+  position: absolute;
+  width: 272px;
+  height: 84px;
+  box-sizing: border-box;
+  top: calc(100% + 1px);
+  right: 0;
+  background-color: white;
+  padding: 20px;
+  display: none;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-top: 0;
+  border: 1px solid lightgray;
+}
+.sns-button-list li a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  margin: 4px;
+  transition: none !important;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+.sns-button span {
+  font-family: "Noto";
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1;
+}
+.facebook {
+  background-color: #1748ad;
+}
+.facebook:hover {
+  background-color: white;
+  border: 1px solid #1748ad;
+  color: #1748ad;
+}
+.facebook:hover i {
+  color: #1748ad;
+}
+.instagram {
+  background-color: #e4276d;
+}
+.instagram:hover {
+  background-color: white;
+  border: 1px solid #e4276d;
+  color: #e4276d;
+}
+.instagram:hover i {
+  color: #e4276d;
+}
+.youtube {
+  background-color: #e52b26;
+}
+.youtube:hover {
+  background-color: white;
+  border: 1px solid #e52b26;
+  color: #e52b26;
+}
+.youtube:hover i {
+  color: #e52b26;
+}
+.blog {
+  background-color: #159911;
+}
+.blog:hover {
+  background-color: white;
+  border: 1px solid #159911;
+  color: #159911;
+}
+.blog:hover i {
+  color: #159911;
+}
+.sns-button-list li a:hover {
+  transform: none;
+}
+.sns-wrap.active .sns-button-list {
+  display: flex;
+}
+.campaign-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Noto";
+  color: #333333;
+  line-height: 2.6rem;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+}
+.campaign-text {
+  font-family: "Noto";
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1;
+}
+.campaign-link::before {
+  content: "\ebe9";
+  font-family: "xeicon" !important;
+  font-weight: 400;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-right: 6px;
+}
+.campaign-link:hover .campaign-text {
+  text-decoration: underline;
+}
+/* #### header 상단 영역 끝 #### */
+
+/* #### 헤더 하단 #### */
+#headBottom {
+  position: relative;
+  height: 85px;
+}
+/* 하단 헤더 (메뉴 바) */
+.headerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #dae9f5;
+  padding: 20px 30px;
+  /* max-width: 1500px; */
+  max-width: 100%;
+  height: 84.9px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.headerBottom nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.headerBottom nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navItemHeaderBottom:hover > a {
+  color: #ff6b6b;
+}
+
+.navItemHeaderBottom {
+  position: relative;
+  cursor: pointer;
+}
+
+/* ▲ */
+.triangle {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #5d5d5d;
+  opacity: 0;
+  /* transition: left 0.3s ease, opacity 0.3s ease; */
+  z-index: 1001;
+}
+.triangle.active {
+  opacity: 1;
+}
+
+/* 회색 드롭다운 박스 */
+.dropdownHeaderBottomWrapper {
+  position: fixed;
+  top: 160px;
+  left: 0;
+  width: 100vw;
+  background: #5d5d5d;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdownHeaderBottomWrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownHeaderBottom {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.dropdownHeaderBottom a {
+  color: #ccc;
+  position: relative;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.dropdownHeaderBottom a:hover {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 밑줄 효과 */
+.dropdownHeaderBottom a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdownHeaderBottom a:hover::after {
+  background-color: #91a3ff;
+}
+
+/* 햄버거 버튼 */
+.hamburgerHeaderBottom {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* 햄버거 -> 전체 화면 */
+.fullscreenNavHeaderBottom {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  overflow-y: auto;
+}
+.fullscreenNavHeaderBottom.active {
+  display: block;
+}
+
+/* 닫기 버튼 */
+.closeBtnHeaderBottom {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.closeBtnHeaderBottom {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 맨 위 4개 항목 */
+.hamburgerTopHeaderBottom {
+  display: flex;
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  justify-content: space-between;
+}
+.hamburgerTopHeaderBottom li {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.hamburgerTopItem {
+  position: relative;
+}
+
+.hamburgerTopItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px; /* 밑줄 두께 */
+  width: 0;
+  background-color: #5f7193;
+  transition: width 0.3s ease;
+}
+
+.hamburgerTopItem:hover::before {
+  width: 100%;
+}
+/* 중간 4개 열 (사업 / 통계 / 자료 / 알림) */
+.hamburgerMidHeaderBottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 30px 50px;
+}
+
+/* 각 열 */
+.hamburgerMidHeaderBottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* align-items: flex-start;  */
+}
+
+/* 항목 스타일 */
+.hamburgerMidHeaderBottom li {
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: normal;
+  list-style-type: none;
+}
+
+.hamburgerMidHeaderBottom li strong {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* 컨테이너 (사업, 통계, 자료, 알림) */
+.hamburgerAllWrap {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px; /* 열 사이 간격 */
+  padding: 50px; /* 전체 여백 */
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* 각 열 */
+.hamburgerCol {
+  flex: 1; /* 4개 열 균등 분배 */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 위아래 항목 간 간격 */
+  list-style: none;
+}
+
+/* 맨 위 항목 (사업, 통계, 자료, 알림) */
+.hamburgerTopItem {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  list-style: none;
+}
+
+/* 아래 세부 항목들 */
+.hamburgerMidList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+/* 빨간 타원 */
+.hamburgerMidList li strong:hover {
+  background-color: red;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 8px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 빨간 원 글머리 (sublist) */
+.redCircle {
+  margin: 5px 0 0 5px;
+  padding: 0;
+  list-style: none;
+}
+.redCircle li {
+  position: relative;
+  margin: 4px 0;
+  padding-left: 5px;
+}
+.redCircle li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 2px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* 햄버거 버튼 -> 세부 항목 -> 밑줄 */
+.redCircle li:hover {
+  color: red;
+  /* font-weight: bold; */
+  text-decoration: 1px underline red;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+address {
+  font-style: normal;
+}
+/* 전체 적용 끝 ----- */
+
+/* main 영역 시작 */
+main {
+  height: 50rem;
+}
+/* main 영역 끝 */
+
+/* footer 영역 시작 */
+footer {
+  position: relative; /* 가상 요소 (연한 회색 선)의 위치를 위한 설정 */
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.5rem; /* 15px */
+}
+
+.footerLinks_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.footerLinks_wrap::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 0.1rem;
+  background-color: #ddd;
+  transform: translateX(-50%);
+  content: "";
+}
+/* .footerLinks_wrap::after {
+  position: absolute;
+  top: 5.2rem;
+  left: 50%;
+  width: 200%;
+  height: 0.1rem;
+  background-color: #ddd;
+  transform: translateX(-50%);
+  content: '';
+} */
+.aboutJeolJuOn ul {
+  display: flex;
+  color: #333;
+  margin: 0;
+  padding: 1.9rem 0;
+  letter-spacing: -0.05em;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.aboutJeolJuOn ul > li {
+  border-right: 1px solid #333;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 2rem;
+}
+.aboutJeolJuOn ul > li:first-of-type {
+  color: #ef5407;
+  font-weight: bold;
+}
+.aboutJeolJuOn ul > li:last-of-type {
+  border-right: none;
+  margin-right: 0;
+}
+.aboutJeolJuOn a:hover {
+  text-decoration: underline; /* 마우스 커서를 올렸을 때 밑줄이 생기도록 설정 */
+}
+.otherBusinesses {
+  position: relative; /* 사업별 웹사이트 바로가기 메뉴 위치를 위한 설정 */
+  width: 20.5rem;
+}
+.otherBusinesses > button {
+  height: 100%;
+  width: 100%;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 100;
+  background-color: transparent;
+  border: 0;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+  padding: 1.7rem 1.2rem;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+.triangleUp {
+  display: inline-block;
+  font-size: 0; /* 기본 폰트 크기를 0으로 설정 */
+}
+.triangleUp::before {
+  content: "▲"; /* 텍스트로 삼각형을 추가 */
+  font-size: 0.8rem; /* 삼각형 크기 조절 */
+  display: inline-block;
+  transform: translateY(-0.2rem) translateX(3rem) rotate(0deg); /* 방향 설정, 필요시 회전 가능 */
+  color: #000; /* 색상 설정 */
+}
+.otherBusinesses > ul {
+  display: none; /* 클릭 시 'block' */
+  position: absolute;
+  bottom: 3.9rem;
+  width: 100%;
+  padding: 1.3rem 1.1rem 2.5rem;
+  background: #fff;
+  border: 1px solid #d7dbde;
+  letter-spacing: -0.05em;
+  text-align: left;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  color: #89919a;
+}
+.otherBusinesses > ul > li {
+  margin-top: 0.6rem;
+}
+.otherBusinesses a:hover {
+  text-decoration: underline; /* 마우스 커서를 올렸을 때 밑줄이 생기도록 설정 */
+}
+.footerBottom_wrap {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  padding: 2.8rem 0rem;
+}
+.footer_logos {
+  display: flex;
+  gap: 1rem;
+}
+.footer_logos span {
+  margin: auto 0.3rem;
+}
+.footer_txts {
+  margin: auto 0;
+}
+.footer_txts address {
+  color: #222;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+.copyright {
+  color: #555;
+  font-size: 1.2rem;
+}
+.web_accessibility_mark {
+  width: 9.5rem;
+  margin-left: auto; /* 오른쪽 정렬 */
+}
+/* footer 영역 끝 */
