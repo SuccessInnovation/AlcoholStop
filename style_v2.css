@@ -25,27 +25,18 @@ html {
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
 }
-
 body {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
   place-items: center;
 }
-
 #app {
   text-align: center;
   align-items: center;
   background-color: #dae9f5;
   margin: 0 auto;
   overflow: hidden;
-}
-
-/* main, footer 너비 설정 */
-.wrap_con {
-  position: relative;
-  max-width: 1500px;
-  margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -58,11 +49,18 @@ address {
   font-style: normal;
 }
 
+/* main, footer 너비 설정 */
+.wrap_con {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 /* <<====== header 영역 시작 ======>> */
 
 /* <------ header skip navigation 시작 (웹 접근성) ------> */
 
-/* 기본 화면에서는 화면에서 벗어나 있도록 설정 */
+/* 기본 화면에서는 미표시 */
 .skip-link {
   position: absolute;
   top: -50px;
@@ -78,7 +76,7 @@ address {
   text-decoration: underline;
 }
 
-/* .skip-link가 focus를 받으면 화면 상단에 표시되도록 설정 */
+/* .skip-link focus 시 화면 상단 표시 */
 .skip-link:focus {
   top: 0;
 }
@@ -109,7 +107,7 @@ address {
   align-items: center;
 }
 
-/* 좌측에 위치한 절주온(ON) dropdown 탭 버튼 */
+/* 좌측 절주온(ON) 드롭다운 버튼 */
 .left-dropdown {
   position: relative;
   width: 25rem;
@@ -148,7 +146,7 @@ address {
   color: #333;
 }
 
-/* dropdown 클릭 후 나타나는 리스트 항목 */
+/* 드롭다운 클릭 시 메뉴 표시 */
 .dropdown-list {
   background-color: white;
   position: absolute;
@@ -186,7 +184,7 @@ address {
   font-weight: 500;
 }
 
-/* dropdown 항목 hover/active시 효과 */
+/* 드롭다운 hover/active 시 효과 */
 .dropdown-list li a span::before {
   content: "";
   position: absolute;
@@ -218,7 +216,7 @@ address {
   gap: 30px;
 }
 
-/* 대표 SNS dropdown 탭 버튼 */
+/* 대표 SNS 드롭다운 탭 버튼 */
 .sns-wrap {
   position: relative;
   display: inline-block;
@@ -292,7 +290,7 @@ address {
   display: flex;
 }
 
-/* 대표 SNS dropdown시 나오는 아이콘 모음 */
+/* 대표 SNS 드롭다운 클릭 시 아이콘 모음 */
 .facebook {
   background-color: #1748ad;
 }
@@ -391,7 +389,7 @@ h1 > a > img {
   height: 52px;
 }
 
-/* 내비게이션 영역 */
+/* 내비게이션 */
 #headerBottom nav ul {
   display: flex;
   list-style: none;
@@ -415,7 +413,7 @@ h1 > a > img {
   font-size: 22.5px;
 }
 
-/* dropdown시 메인 카테고리 가리키는 삼각형 */
+/* 드롭다운 시 메인 카테고리 가리키는 삼각형 */
 .triangle {
   position: absolute;
   bottom: 100%;
@@ -433,7 +431,7 @@ h1 > a > img {
   opacity: 1;
 }
 
-/* dropdow시 나타나는 링크 묶음 */
+/* 드롭다운 시 나타나는 링크 묶음 */
 .dropdownHeaderBottomWrapper {
   position: fixed;
   top: 135px;
@@ -492,7 +490,7 @@ h1 > a > img {
   cursor: pointer;
 }
 
-/* 햄버거 버튼 클릭시 나오는 화면 구성 */
+/* 햄버거 버튼 클릭 시 화면 */
 .fullscreenNavHeaderBottom {
   display: none;
   position: fixed;
@@ -756,7 +754,7 @@ h1 > a > img {
   opacity: 0;
 }
 
-/* hover , active */
+/* 뉴스피드 hover/active 시 효과 */
 .newsarea .tab a:hover::after,
 .newsarea .tab a:hover,
 .newsarea .tab a.active::after {
@@ -765,7 +763,7 @@ h1 > a > img {
   color: #3a6dd5 !important;
 }
 
-/* 뉴스피드 탭메뉴 */
+/* 뉴스피드 탭 메뉴 */
 .newsarea::before {
   display: block;
   position: absolute;
@@ -778,7 +776,7 @@ h1 > a > img {
   content: "";
 }
 
-/* 탭메뉴 메인 카테고리 */
+/* 탭 메뉴 메인 카테고리 */
 h3 {
   width: auto;
   display: inline-block;
@@ -803,33 +801,33 @@ h3 {
   cursor: pointer;
 }
 
-/* 탭메뉴 클릭시 효과 */
+/* 탭 메뉴 클릭 시 효과 */
 h3 > a.active {
   color: #3a6dd5 !important;
   font-weight: 700;
   text-decoration: none;
 }
 
-/* active 클래스가 없는 tab-news */
+/* active 클래스 없는 tab-news */
 .tab-news {
   float: left;
   width: 100%;
   margin-top: 25px;
 }
 
-/* active 클래스를 가진 .tab-news는 보이도록 처리 */
+/* tab-news active 시 표시 */
 .tab-news.active {
   display: block;
   opacity: 1;
 }
 
-/* "더보기" 버튼이 보이도록 active 상태일 때 설정 */
+/* tab-news active 시 "더보기" 버튼 표시 */
 .tab-news.active .more {
   display: block;
   opacity: 1;
 }
 
-/* tab-news 클릭시 강조 바 애니메이션 효과 */
+/* tab-news 클릭 시 강조 바 애니메이션 효과 */
 .newsarea .tab a::after {
   display: block;
   position: absolute;
@@ -901,14 +899,14 @@ h3 > a.active {
   unicode-bidi: isolate;
 }
 
-/* 게시물 설명 첫번째 탭 */
+/* 게시물 설명 첫 번째 탭 */
 .news-list > li:first-child {
   margin-bottom: 18px;
   padding-bottom: 20px;
   border-bottom: dotted 1px #ccc;
 }
 
-/* 게시물 설명 첫번째 타이틀 */
+/* 게시물 설명 첫 번째 타이틀 */
 .news-list > li:first-child .tit {
   display: block;
   margin-bottom: 15px;
@@ -919,7 +917,7 @@ h3 > a.active {
   overflow: hidden;
 }
 
-/* 게시물 설명 첫번째 박스 설명 */
+/* 게시물 설명 첫 번째 박스 설명 */
 .news-list > li:first-child .desc {
   display: block;
   height: 44px;
@@ -927,7 +925,7 @@ h3 > a.active {
   text-overflow: ellipsis;
 }
 
-/* 게시물 설명 본문 a 태그 스타일 지정 */
+/* 게시물 설명 본문 a 태그 */
 .news-list li a {
   display: block;
   width: 100%;
@@ -939,7 +937,7 @@ h3 > a.active {
   text-decoration: underline;
 }
 
-/* 이벤트 게시물 a 태그 스타일 지정 */
+/* 이벤트 게시물 a 태그 */
 .news-list > li:nth-child(n + 2) a {
   display: inline-block;
   width: calc(100% - 90px);
@@ -1159,7 +1157,7 @@ h3 > a.active {
   color: white;
 }
 
-/* hover시 화살표 움직이는 이벤트 */
+/* hover 시 화살표 움직이는 이벤트 */
 .main_leftBottomLink:hover .arrow {
   transform: translateX(10px);
   transition: 0.3s;
@@ -1188,6 +1186,7 @@ h3 > a.active {
   display: flex;
   justify-content: space-between;
 }
+/* 위 회색 구분선 */
 .footerLinks_wrap::before {
   position: absolute;
   top: 0;
@@ -1198,6 +1197,7 @@ h3 > a.active {
   transform: translateX(-50%);
   content: "";
 }
+/* 아래 회색 구분선 */
 .footerLinks_wrap::after {
   position: absolute;
   top: 5.2rem;
@@ -1209,7 +1209,7 @@ h3 > a.active {
   content: "";
 }
 
-/* footer 상단 좌측 메뉴 */
+/* 좌측 메뉴 */
 .aboutJeolJuOn ul {
   display: flex;
   color: #333;
@@ -1237,7 +1237,7 @@ h3 > a.active {
   text-decoration: underline;
 }
 
-/* footer 상단 우측 dropdown 메뉴 */
+/* 우측 드롭다운 메뉴 */
 .otherBusinesses {
   position: relative; /* 사업별 웹사이트 바로가기 메뉴 위치를 위한 설정 */
   width: 20.6rem;
@@ -1298,7 +1298,7 @@ h3 > a.active {
   padding: 2.8rem 0rem;
 }
 
-/* footer 하단 우측 로고 */
+/* 우측 로고 */
 .footer_logos {
   display: flex;
   gap: 1rem;
@@ -1307,7 +1307,7 @@ h3 > a.active {
   margin: auto 0.3rem;
 }
 
-/* footer 하단 주소 및 저작권 */
+/* 주소 및 저작권 */
 .footer_txts {
   margin: auto 0;
   text-align: left;
@@ -1322,7 +1322,7 @@ h3 > a.active {
   font-size: 1.2rem;
 }
 
-/* footer 하단 좌측 워터마크 */
+/* 좌측 워터마크 */
 .web_accessibility_mark {
   width: 9.5rem;
   margin-left: auto;

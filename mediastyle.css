@@ -1,0 +1,225 @@
+/* ========================== */
+/* main right bottom 크기별 조정 */
+/* ========================== */
+
+/* ( ~ 1500px) */
+@media (max-width: 1500px) {
+  .icon-link {
+    padding: 2.5rem;
+  }
+  .icon-link a {
+    font-size: 1.2rem;
+  }
+}
+
+/* ( ~ 1400px) */
+@media (max-width: 1400px) {
+  .icon-link {
+    padding: 2.5rem 1.5rem;
+  }
+}
+/* ( ~ 1300px) */
+@media (max-width: 1300px) {
+  .icon-link a {
+    font-size: 1rem;
+  }
+}
+
+/* ========================== */
+/* main left top 크기별 조정 */
+/* ========================== */
+
+/* ( 1130px ~ 1215px) */
+@media screen and (min-width: 1130px) and (max-width: 1215px) {
+  .leftTopArticle a .ellipsis {
+    font-size: 15px;
+  }
+}
+
+/* ========================== */
+/* main left bottom 크기별 조정 */
+/* ========================== */
+
+/* ( ~ 1235px) */
+@media (max-width: 1235px) {
+  .main_leftBottomBox span div {
+    font-size: 21px;
+  }
+}
+/* ( ~ 1185px) */
+@media (max-width: 1185px) {
+  .main_leftBottomBox span div {
+    font-size: 19.7px;
+  }
+}
+
+/* ========================== */
+/* mobile ( ~ 1130px) */
+/* ========================== */
+
+@media (max-width: 1130px) {
+  /* header, main, footer 너비 설정 */
+  .wrap_con {
+    max-width: 1130px;
+  }
+
+  /* <<====== header 영역 시작 ======>> */
+
+  /* <------ header top 시작 ------> */
+
+  .header-top {
+    margin: 0 9px;
+  }
+  .left-dropdown {
+    width: 225px;
+  }
+  .dropdown-btn span {
+    font-size: 14.4px;
+  }
+  .dropdown-list li a {
+    padding: 2.4px 10px;
+  }
+  .dropdown-list li a span {
+    font-size: 13.5px;
+  }
+  .sns-button span {
+    font-size: 15px;
+  }
+  .campaign-text {
+    font-size: 14.4px;
+  }
+
+  /* <------ header bottom 시작 ------> */
+
+  .headerBottom wrap-con {
+    padding: 28.238px 28.25px;
+    justify-content: space-between;
+  }
+
+  /* 내비게이션 숨기기 */
+  .headerBottom nav {
+    display: none;
+  }
+
+  /* 햄버거 버튼 */
+  .hamburgerHeaderBottom {
+    display: block;
+    /* padding: 6px 12px; */
+    margin-right: 28.25px;
+    background-color: white !important;
+    color: black;
+    position: absolute;
+    top: 27px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    font-size: 3.2rem;
+    overflow: hidden;
+    z-index: 99;
+  }
+
+  /* 드롭다운 메뉴 감추기 */
+  .dropdownHeaderBottomWrapper {
+    display: none !important;
+  }
+
+  /* <<====== main 영역 시작 ======>> */
+
+  #wrap {
+    overflow: visible;
+    display: inline-block;
+  }
+
+  /* 배경이미지 */
+  #main {
+    height: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  #main::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-49%) translateY(35%);
+    background-image: url('./image/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    content: ‘’;
+  }
+
+  /* <------ main center 시작 ------> */
+
+  .mainCenter {
+    position: relative;
+    width: 95%;
+    padding: 5rem 2rem 25.5rem;
+  }
+
+  /* 캐릭터 이미지 */
+  .mainCenter .character {
+    bottom: -100px;
+  }
+
+  /* <------ main right 시작 ------> */
+
+  .right {
+    position: relative;
+    margin-top: 130px;
+    width: 48.5%;
+  }
+
+  /* main right top */
+  .rightbox {
+    height: 42rem;
+  }
+
+  /* <------ main left 시작 ------> */
+
+  .left {
+    position: relative;
+    margin-top: 130px;
+    width: 48.5%;
+    overflow: visible;
+  }
+
+  /* main left top */
+  .leftTopWrap {
+    height: 42rem;
+  }
+  .leftTop {
+    padding: 22.5px;
+    height: 90%;
+  }
+  .leftTopArticle a p {
+    font-size: 12.6px;
+  }
+  .leftTopArticle a .ellipsis {
+    font-size: 13.5px;
+  }
+
+  /* <<====== footer 영역 시작 ======>> */
+
+  /* <------ footer bottom 시작 ------> */
+
+  .footerBottom_wrap {
+    display: block;
+    position: relative;
+    margin: 0 20px 0 15px;
+  }
+
+  /* footer 하단 주소 및 저작권 */
+  .footer_txts {
+    max-width: calc(100% - 95px); /* 95px는 wam 크기 */
+  }
+
+  /* footer 하단 좌측 워터마크 */
+  .web_accessibility_mark span {
+    position: absolute;
+    right: 0;
+    bottom: 28px; /* .footerBottom_wrap padding 사이즈에 맞춤 */
+  }
+}

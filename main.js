@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdownWrapper = document.getElementById("dropdownWrapper");
   const dropdownContent = document.getElementById("dropdownContent");
   const triangle = document.getElementById("triangle");
-  const headBottom = document.getElementById("headBottom");
+  // 헤더하단 headBottom -> headerBottom 변경(headerBottom)
+  const headerBottom = document.getElementById("headerBottom");
 
   navItems.forEach((item) => {
     const originalContent = item.querySelector(".dropdownHeaderBottom");
@@ -59,7 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
       triangle.classList.add("active");
 
       // 헤더 하단 컨테이너 기준 위치 계산
-      const headerRect = headBottom.getBoundingClientRect();
+      // 헤더하단 headBottom -> headerBottom으로 변경(headerRect)
+      const headerRect = headerBottom.getBoundingClientRect();
       const itemRect = item.getBoundingClientRect();
       const wrapperRect = dropdownWrapper.getBoundingClientRect();
       // 삼각형의 left: 메뉴 항목 중앙 (헤더 컨테이너 기준)
@@ -91,6 +93,7 @@ function toggleFullscreenNav() {
     nav.classList.toggle("active");
   }
 }
+// 헤더하단 x버튼 로직 추가
 // x 버튼 회전
 const closeBtn = document.querySelector(".closeBtnHeaderBottom");
 
@@ -121,3 +124,20 @@ const closeBtn = document.querySelector(".closeBtnHeaderBottom");
     }
   }
 })();
+
+// 박사은 시작
+// 주메뉴 바로가기 클릭 후 skip nav 숨기기
+document.addEventListener("DOMContentLoaded", function () {
+  const skipLinks = document.querySelectorAll(".skip-link");
+  const skipNav = document.querySelector(".skip-nav");
+  skipLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      skipNav.style.display = "none";
+    });
+  });
+  // skip nav이 한 번만 나오는 것을 막음
+  document.addEventListener("focusin", function () {
+    skipNav.style.display = "block";
+  });
+});
+// 박사은 끝
