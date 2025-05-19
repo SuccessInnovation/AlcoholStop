@@ -7,7 +7,8 @@
 
 ---
 
-### 사용 기술
+### 사용 언어
+[![My Skill](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
 
 
 
